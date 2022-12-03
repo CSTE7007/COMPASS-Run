@@ -1,0 +1,18 @@
+don007@DESKTOP-18F0S8N:/mnt/e/COMPASS$ ./COMPASS -i data/AML-59-001 -o AML-59-001 --nchains 4 --chainlength 5000 --CNV 1png -o AML-59-001_tree.png AML-59-001_tree.gv
+The following regions are excluded from the CNV inference because their coverage is too low: GATA2,NPM1,JAK2,SRSF2,chr18,
+Starting 4 MCMC chains in parallel
+Chain 3: Starting first phase (finding the best tree without CNV).
+Chain 0: Starting first phase (finding the best tree without CNV).
+Chain 1: Starting first phase (finding the best tree without CNV).
+Chain 2: Starting first phase (finding the best tree without CNV).
+Chain 2: After the first phase (inferring the best tree without CNVs), COMPASS identified the following candidate regions which might contain CNVs: EZH2,WT1,TP53,
+Chain 2: Starting second phase (finding the best tree with CNV).
+Chain 0: After the first phase (inferring the best tree without CNVs), COMPASS identified the following candidate regions which might contain CNVs: EZH2,WT1,TP53,
+Chain 0: Starting second phase (finding the best tree with CNV).
+Chain 3: After the first phase (inferring the best tree without CNVs), COMPASS identified the following candidate regions which might contain CNVs: EZH2,WT1,TP53,
+Chain 3: Starting second phase (finding the best tree with CNV).
+Chain 1: After the first phase (inferring the best tree without CNVs), COMPASS identified the following candidate regions which might contain CNVs: EZH2,TP53,
+Chain 1: Starting second phase (finding the best tree with CNV).
+Completed ! The output was written to AML-59-001_tree.png in dot format. You can visualize it by running: dot -Tpng AML-59-001_tree.png -o output.png
+don007@DESKTOP-18F0S8N:/mnt/e/COMPASS$ dot -Tpng AML-59-001_tree.png -o output.png
+don007@DESKTOP-18F0S8N:/mnt/e/COMPASS$

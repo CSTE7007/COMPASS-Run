@@ -1,0 +1,34 @@
+PS E:\COMPASS> wsl
+don007@DESKTOP-18F0S8N:/mnt/e/COMPASS$ make
+g++ -std=c++11 -O2 -fopenmp -c COMPASS.cpp
+g++ -std=c++11 -O2 -c Scores.cpp
+g++ -std=c++11 -O2 -c Node.cpp
+g++ -std=c++11 -O2 -c Tree.cpp
+g++ -std=c++11 -O2 -c Inference.cpp
+g++ -std=c++11 -O2 -c input.cpp
+g++ -std=c++11 -O2 -fopenmp -o COMPASS COMPASS.o Scores.o Node.o Tree.o Inference.o input.o
+don007@DESKTOP-18F0S8N:/mnt/e/COMPASS$ sudo apt-get install graphviz
+[sudo] password for don007:
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+graphviz is already the newest version (2.42.2-3build2).
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+don007@DESKTOP-18F0S8N:/mnt/e/COMPASS$ ./COMPASS -i data/AML-59-001 -o tree_AML-59-001.gv --nchains 4 --chainlength 5000 --CNV 1
+ tree_AML-59-001.png tree_AML-59-001.gvThe following regions are excluded from the CNV inference because their coverage is too low: GATA2,NPM1,JAK2,SRSF2,chr18,
+Starting 4 MCMC chains in parallel
+Chain 2: Starting first phase (finding the best tree without CNV).
+Chain 1: Starting first phase (finding the best tree without CNV).
+Chain 3: Starting first phase (finding the best tree without CNV).
+Chain 0: Starting first phase (finding the best tree without CNV).
+Chain 0: After the first phase (inferring the best tree without CNVs), COMPASS identified the following candidate regions which might contain CNVs: EZH2,WT1,TP53,
+Chain 0: Starting second phase (finding the best tree with CNV).
+Chain 3: After the first phase (inferring the best tree without CNVs), COMPASS identified the following candidate regions which might contain CNVs: EZH2,WT1,TP53,
+Chain 3: Starting second phase (finding the best tree with CNV).
+Chain 1: After the first phase (inferring the best tree without CNVs), COMPASS identified the following candidate regions which might contain CNVs: EZH2,WT1,TP53,
+Chain 1: Starting second phase (finding the best tree with CNV).
+Chain 2: After the first phase (inferring the best tree without CNVs), COMPASS identified the following candidate regions which might contain CNVs: EZH2,WT1,TP53,
+Chain 2: Starting second phase (finding the best tree with CNV).
+Completed ! The output was written to tree_AML-59-001.gv in dot format. You can visualize it by running: dot -Tpng tree_AML-59-001.gv -o output.png
+don007@DESKTOP-18F0S8N:/mnt/e/COMPASS$ dot -Tpng -o tree_AML-59-001.png tree_AML-59-001.gv
+don007@DESKTOP-18F0S8N:/mnt/e/COMPASS$
